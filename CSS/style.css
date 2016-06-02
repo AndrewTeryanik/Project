@@ -1,0 +1,595 @@
+/*CLEAR STYLE PAGE*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body, html {
+    @import url(https://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic);
+    background: #fff;
+    color: #131720;
+    font-family: 'Neucha' ;
+    font-size: 16px;
+    height: 100%;
+}
+ 
+/*************container**********/
+#container {
+    position: relative;
+    background: #fff;
+    margin: 0px auto;
+    width: 1024px;
+    min-height: 100%;
+    
+}
+ 
+/**************Header*************/
+#header {
+    position: relative;
+    background: #666666;
+    height: 100px;
+    width: 1024px;
+    border-radius: 0 0 3px 3px;
+}
+
+.logo {
+    position: absolute;
+    display: block;
+    left: 299px; 
+}
+
+.search {
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 40px;   
+}
+
+.search-2 {
+    background: #fff;
+    width: 65px;
+    border-radius: 3px;
+    border: 1.5px solid #AAA7A1;
+    color: 000000;
+}
+
+.search-3 {
+    background: #fff;
+    width: 65px;
+    border-radius: 3px;
+    color: #403e3e;
+    border: 1.5px solid #AAA7A1;
+}
+
+.search-2:hover {
+    background: #fff;
+    border: 1.5px solid #AAA7A1;
+    transition: all 0.5s ease-out;
+    width: 130px;
+}
+
+.search-2:focus {
+    background: #fff;
+    border: 1.5px solid #AAA7A1;
+    width: 130px;
+    transition: all 0.5s ease-out;
+}
+
+.search-3:hover {
+    background: #AAA7A1;
+    color: #000000;
+    border: 1.5px solid #AAA7A1;
+    transition: all 0.2s ease-out;
+}
+
+.search-3:active {
+    background: #333231;
+    color: #AAA7A1;
+    border: 1.5px solid #AAA7A1;
+    transition: all 0.2s ease-out;
+}
+
+/*****************Menu****************/
+#menu {
+    float: left;
+    background: #fff;
+    width: 150px;
+    height: 100%; 
+}
+
+/************Nav Menu*********/
+.nav {
+    width: 150px;
+    padding-top: 20px; 
+    height: 100%;
+}
+
+.nav li a {
+    color: #131720;
+    text-transform: uppercase;
+    font-size: 18px;    
+    line-height: 30px;
+    font-family: 'Neucha';
+    text-decoration: none;
+    padding-left: 12px;
+}
+
+.nav li:hover {
+    background: #666666;
+    border-radius: 3px;
+}
+
+.nav ul li {
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+.nav .dropdown {
+    position: absolute;
+    background: #bab7b1;
+    display: none;  
+    top: 0px; 
+    left: -150px; 
+    text-align: right;  
+}
+
+.nav li:hover .dropdown {
+    display: block; 
+    border-radius: 3px;
+}
+
+.nav .dropdown li {
+    width: 150px;
+    height: 30px;
+}
+
+.nav .dropdown li a {
+    font-size: 18px;
+    width: 150px;
+    padding-right: 10px;   
+}
+
+.dropdown li:hover {
+    background: #908d89;  
+}
+
+/******************Content***************/
+#content {
+    float: right;
+    background: #fff;
+    float: right;
+    width: 874px;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*************Slider****************/
+section {
+    width: 840px;
+    float: right;  
+    background: white;
+    box-shadow: 0 0 3px #ccc;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider input[type=radio] {
+    display: none;
+}
+
+.slider-inner {
+    overflow: hidden;
+}
+
+.slider-slides{
+    width: 300%;
+    transition: transform .8s ease;
+}
+
+.slider-slides img {
+    float: left;
+    width: 840px;
+    height: auto;    
+}
+
+.slider-controls {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    z-index: 100;
+    text-align: center;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background: #ccc;
+    cursor: pointer;   
+    border: 4px solid white;
+    border-radius: 50%;    
+    box-shadow: 0px 0px 2px rgba(0,0,0,.8);  
+    transition: background-color .2s;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] { 
+    background-color: #666;
+}
+#btn-1:checked ~ .slider-inner .slider-slides { 
+    transform: translate(0);
+}
+#btn-2:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-33.33%);
+}
+#btn-3:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-66.66%);
+}
+
+/***********Text affter slider***********/
+.text {
+    width: 800px;
+    padding-left: 50px;
+    padding-top: 550px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.paragraph {
+    color: #131720;
+    font-size: 16px;    
+}
+
+/******************Footer***************/
+#footer {
+    position: relative;
+    bottom: 0;
+    background: #666666;
+    height: 40px;
+    width: 1024px;
+    padding-top: 8px;
+    margin-top:-40px;
+    clear:both;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px 3px 0 0; 
+}
+
+.contacts::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #D8D4CD;
+    margin-bottom: 10px;
+    
+}
+
+.contacts li {
+    width: 800px;
+}
+
+.contacts a {
+    color: #D8D4CD;
+    font-size: 16px;    
+    text-decoration: none;
+    padding: 0 17px;
+    float: left;
+    bottom: 50px;
+    width: 150px;  
+}
+
+.up {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+/**********Page Story*****************/
+.history {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+/**********Page Gameplay**************/
+.gameplay {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+.gameplay h {
+    font-weight: bolder;
+}
+
+
+/**********Page Review*****************/
+.review {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+/**********Page Characters**************/
+.characters {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+.characters-img {
+    width: 600px;
+    height: auto;
+    padding-left: 130px;
+}
+
+/********Page Warriors **************/
+.warriors {
+    width: 874px;
+    height: 100%;    
+}
+
+.right {
+    margin-left: 30px;
+    float: right;
+    width: 415px;
+    text-align: justify;
+    line-height: 22px;
+    text-indent: 20px;
+    padding-right: 10px;
+}
+
+.right img {
+    width: 415px;
+    float: right;
+}
+
+.left {
+    float: right;
+    width: 415px;
+    text-align: justify;
+    line-height: 22px;
+    text-indent: 20px;
+}
+
+.left img {
+    width: 415px;
+    float: right;
+}
+
+/**********Page Boss**************/
+.boss {
+    width: 874px;
+    height: 100%;
+}
+
+.right {
+    margin-left: 30px;
+    float: right;
+    width: 415px;
+    text-align: justify;
+    line-height: 22px;
+    text-indent: 20px;
+    padding-right: 10px;
+}
+
+.right img {
+    width: 415px;
+    float: right;
+}
+
+.left {
+    float: right;
+    width: 415px;
+    text-align: justify;
+    line-height: 22px;
+    text-indent: 20px;
+}
+
+.left img {
+    width: 415px;
+    float: right;
+}
+
+/**********Page Weapons**************/
+.weapon {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+.weapon-img {
+    width: 600px;
+    height: auto;
+    padding-left: 130px;
+}
+
+/**********Page Fight_methods***********/
+.fight {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+.fight h {
+    font-weight: 200;
+}
+
+/**********Page Cheats****************/
+.cheats {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+.cheats h {
+    font-weight: 200;
+}
+
+/**********Page Location************/
+.location img {
+    float: right;
+    width: 415px;
+    height: 265px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/**********Page Screenshots************/
+.screenshots img {
+    float: right;
+    width: 415px;
+    height: 265px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/**********Page Project************/
+.project {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+.project h {
+    font-weight: 200;
+}
+/**********Page Facts****************/
+
+.facts ul li{
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+    list-style: square;
+    list-style-position: inside;   
+}
+
+/**********Page Contacts*******/
+.info {
+    position: absolute;
+    width: 730px;
+    margin-top: 100px;
+    text-align: center;
+    line-height: 22px;
+    
+}
+
+.address {
+    color: #131720;
+    font-size: 16px;    
+}
+
+/**********Page Author**********/
+.author {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 22px;   
+    margin-left: 30px;
+}
+
+/**********Page Registration*******/
+.registration {
+    position: relative;
+    width: 874px;
+    height: 100%;
+}
+
+.blanc {
+    position: absolute;
+    width: 400px;
+    top: 10px;
+    left: 153px;
+    line-height: 40px;
+    background: #DDDAD3;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: solid #3C3941;
+    text-transform: uppercase;
+    font-size: 18px; 
+    color: #3C3941; 
+    font-weight: bolder;
+}
+
+.sign-up {
+    background: #fff;
+    width: 65px;
+    border-radius: 3px;
+    color: #AEA9A9;
+    border: 2px solid #A9A9A9;
+}
+
+.sign-up:hover {
+    background: #666666;
+    color: #fff;
+    border: 2px solid #666666;
+    transition: all 0.2s ease-out;
+}
+
+.sign-up:active {
+    background: #333231;
+    color: #AAA7A1;
+    border: 2px solid #333231;
+}
